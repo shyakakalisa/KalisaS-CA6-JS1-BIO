@@ -8,35 +8,36 @@
     <meta name="author" content="Shyaka Kalisa">
 </head>
 <body>
-    <h1>Welcome to Bear Ninja Hunter!</h1>
+    <h1>Bear Ninja Hunter Game</h1>
     <p id="demo">Your game results will appear here.</p>
 
     <script>
-        // 1. Collect player's name
-        let playerName = prompt("Welcome! Please enter your name to play Bear Ninja Hunter:");
+        // 1. Prompt player for their username (exact wording from spec)
+        let playerName = prompt("To continue, please enter your uname: ");
 
-        // 2. Greet the player with a personalized alert
+        // 2. Alert greeting the player (match spec style)
         alert("Hello " + playerName + "! Let's play Bear Ninja Hunter!");
 
-        // 3. Prompt the player for their choice
+        // 3. Prompt player to choose their character (Bear, Ninja, Hunter)
         let playerChoice = prompt("Choose your character: Bear, Ninja, or Hunter");
 
         // 4. Hard-coded computer choice
         let computerChoice = "Bear";
 
-        // 5. Combine messages for display
-        let messageToConsole = playerName + " chose " + playerChoice + ". Computer chose " + computerChoice + ".";
-        let messageToPage = `Hello ${playerName}! You chose ${playerChoice}. The computer chose ${computerChoice}.`;
+        // 5. Prepare message for console output
+        let consoleMessage = playerName + " chose " + playerChoice + ". Computer chose " + computerChoice + ".";
+        console.log(consoleMessage + " Ready for the next round?");
 
-        // 6. Output to console
-        console.log(messageToConsole + " Ready for the next round?");
+        // 6. Prepare message for HTML page output using backticks
+        let pageMessage = `Hello ${playerName}! You chose ${playerChoice}. The computer chose ${computerChoice}.`;
+        document.getElementById("demo").innerHTML = pageMessage;
 
-        // 7. Output to HTML page
-        document.getElementById("demo").innerHTML = messageToPage;
-
-        // 8. Example of using escape character for apostrophe
+        // 7. Example of using escape character for apostrophe
         console.log('Let\'s see who wins this round!');
 
+        // 8. Comment for clarity
+        // This prototype does not include game logic yet.
+        // Future assignments will add win/lose rules.
     </script>
 </body>
 </html>
